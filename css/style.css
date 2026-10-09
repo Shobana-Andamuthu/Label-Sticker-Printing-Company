@@ -5176,8 +5176,9 @@ textarea {
 .section-tag {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  padding: 6px 16px;
+  padding: 7px 18px;
   background: var(--color-primary-light);
   border: 1px solid rgba(225, 20, 113, 0.25);
   border-radius: 9999px;
@@ -5186,9 +5187,28 @@ textarea {
   font-weight: 800;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   box-shadow: var(--shadow-sm);
   transition: all var(--transition-normal);
+  max-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 1.35;
+}
+
+.inner-hero-badge svg,
+.section-tag svg,
+.hero-badge svg,
+.hero-2-studio-badge svg {
+  flex-shrink: 0;
+}
+
+.inner-hero-badge span,
+.section-tag span,
+.hero-badge span,
+.hero-2-studio-badge span {
+  display: inline;
+  text-align: center;
 }
 
 [data-theme="dark"] .inner-hero-badge,
