@@ -6085,6 +6085,45 @@ input[type="date"] {
   transition: opacity var(--transition-fast);
 }
 
+.auth-checkbox-label {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  gap: 10px !important;
+  cursor: pointer;
+  user-select: none;
+  color: var(--text-secondary);
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  width: 100%;
+}
+
+.auth-checkbox-label input[type="checkbox"],
+input[type="checkbox"],
+input[type="radio"] {
+  width: 16px !important;
+  min-width: 16px !important;
+  max-width: 16px !important;
+  height: 16px !important;
+  min-height: 16px !important;
+  max-height: 16px !important;
+  padding: 0 !important;
+  margin: 2px 0 0 0 !important;
+  flex: 0 0 16px !important;
+  flex-shrink: 0 !important;
+  accent-color: var(--color-primary) !important;
+  cursor: pointer;
+}
+
+.auth-checkbox-label span {
+  flex: 1 1 auto;
+  text-align: left;
+}
+
+[dir="rtl"] .auth-checkbox-label span {
+  text-align: right;
+}
+
 .auth-forgot-link:hover {
   opacity: 0.8;
   text-decoration: underline;

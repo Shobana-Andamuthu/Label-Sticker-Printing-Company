@@ -183,8 +183,8 @@
 
               <!-- Remember Me & Forgot Password Row -->
               <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; font-size:0.875rem;">
-                <label style="display:flex; align-items:center; gap:8px; cursor:pointer; user-select:none; color:var(--text-secondary);">
-                  <input type="checkbox" id="login-remember" checked style="accent-color:var(--color-primary); width:16px; height:16px; cursor:pointer;">
+                <label class="auth-checkbox-label" style="width:auto; align-items:center !important;">
+                  <input type="checkbox" id="login-remember" checked>
                   <span>Remember me</span>
                 </label>
                 <a href="#forgot-password" class="auth-forgot-link" id="link-forgot-pwd">Forgot password?</a>
@@ -286,8 +286,8 @@
 
               <!-- Terms acceptance -->
               <div style="margin-bottom:18px; font-size:0.8125rem;">
-                <label style="display:flex; align-items:flex-start; gap:8px; cursor:pointer; user-select:none; color:var(--text-secondary);">
-                  <input type="checkbox" id="signup-terms" required style="accent-color:var(--color-primary); width:16px; height:16px; cursor:pointer; margin-top:2px;">
+                <label class="auth-checkbox-label">
+                  <input type="checkbox" id="signup-terms" required>
                   <span>I agree to the <a href="#" style="color:var(--color-primary); font-weight:700;">Terms of Service</a> and <a href="#" style="color:var(--color-primary); font-weight:700;">Privacy Policy</a>.</span>
                 </label>
                 <span class="form-error-msg" id="err-signup-terms" style="display:none; color:#ef4444; font-size:0.75rem; margin-top:4px;">You must agree to continue.</span>
