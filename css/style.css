@@ -1808,6 +1808,8 @@ ul, ol {
   border-radius: 6px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
+  z-index: 10 !important;
+  pointer-events: none;
 }
 
 [dir="rtl"] .category-tag {
@@ -6338,6 +6340,7 @@ input[type="radio"] {
 .product-img-box img,
 .finish-img-box img,
 .industry-banner img,
+.industry-img-box img,
 .collection-img-wrap img,
 .story-img-wrap img,
 .catalog-media img {
@@ -6345,6 +6348,35 @@ input[type="radio"] {
   height: 100% !important;
   object-fit: cover !important;
   display: block !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.category-img-box,
+.product-img-box,
+.finish-img-box,
+.industry-img-box,
+.collection-img-wrap,
+.story-img-wrap,
+.catalog-media {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* Ensure all floating badges and tags stay permanently visible above scaled images on card hover */
+.category-tag,
+.product-badge-group,
+.product-badge,
+.industry-badge,
+.collection-badge,
+.finish-tag,
+.catalog-badge-floating,
+.catalog-category-tag,
+.material-badge,
+.story-metric-badge {
+  position: absolute !important;
+  z-index: 10 !important;
+  pointer-events: none !important;
 }
 
 /* Unified Typography Spacing across all cards */
