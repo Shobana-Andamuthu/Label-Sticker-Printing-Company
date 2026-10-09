@@ -1078,21 +1078,32 @@ ul, ol {
 
 .industry-badge {
   position: absolute;
-  top: 14px;
-  left: 14px;
+  top: 12px;
+  left: 12px;
   background: rgba(15, 29, 56, 0.85);
   backdrop-filter: blur(6px);
   color: #ffffff;
-  padding: 4px 12px;
+  padding: 5px 12px;
   border-radius: 6px;
   font-size: 0.6875rem;
   font-weight: 800;
   text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+  height: 24px !important;
+  width: auto !important;
+  box-sizing: border-box !important;
+  z-index: 10 !important;
+  pointer-events: none;
 }
 
 [dir="rtl"] .industry-badge {
   left: auto;
-  right: 14px;
+  right: 12px;
 }
 
 .industry-body {
@@ -1799,17 +1810,25 @@ ul, ol {
   position: absolute;
   top: 12px;
   left: 12px;
-  background: rgba(15, 29, 56, 0.8);
+  background: rgba(15, 29, 56, 0.85);
   backdrop-filter: blur(4px);
   color: #ffffff;
   font-size: 0.6875rem;
   font-weight: 800;
-  padding: 4px 10px;
+  padding: 5px 12px;
   border-radius: 6px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   z-index: 10 !important;
   pointer-events: none;
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+  height: 24px !important;
+  width: auto !important;
+  box-sizing: border-box !important;
 }
 
 [dir="rtl"] .category-tag {
@@ -1937,9 +1956,11 @@ ul, ol {
   top: 12px;
   left: 12px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   gap: 6px;
-  z-index: 2;
+  z-index: 10 !important;
+  pointer-events: none;
 }
 
 [dir="rtl"] .product-badge-group {
@@ -1950,11 +1971,19 @@ ul, ol {
 .product-badge {
   font-size: 0.6875rem;
   font-weight: 800;
-  padding: 4px 10px;
+  padding: 5px 12px;
   border-radius: 6px;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+  height: 24px !important;
+  width: auto !important;
+  box-sizing: border-box !important;
 }
 
 .product-badge.hot { background-color: var(--color-primary); color: #ffffff; }
@@ -4285,21 +4314,31 @@ textarea {
 
 .collection-badge {
   position: absolute;
-  top: 14px;
-  left: 14px;
+  top: 12px;
+  left: 12px;
   padding: 5px 12px;
-  border-radius: 9999px;
-  font-size: 0.75rem;
+  border-radius: 6px;
+  font-size: 0.6875rem;
   font-weight: 800;
   letter-spacing: 0.04em;
   background: var(--color-primary);
   color: #ffffff;
   box-shadow: 0 4px 12px rgba(225, 20, 113, 0.35);
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+  height: 24px !important;
+  width: auto !important;
+  box-sizing: border-box !important;
+  z-index: 10 !important;
+  pointer-events: none;
 }
 
 [dir="rtl"] .collection-badge {
   left: auto;
-  right: 14px;
+  right: 12px;
 }
 
 .collection-body {
