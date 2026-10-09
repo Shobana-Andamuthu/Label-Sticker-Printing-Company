@@ -4366,6 +4366,19 @@ textarea {
   white-space: nowrap;
 }
 
+.matrix-table th:nth-child(2),
+.matrix-table th:nth-child(3),
+.matrix-table th:nth-child(4),
+.matrix-table th:nth-child(5),
+.matrix-table th:nth-child(7),
+.matrix-table td:nth-child(2),
+.matrix-table td:nth-child(3),
+.matrix-table td:nth-child(4),
+.matrix-table td:nth-child(5),
+.matrix-table td:nth-child(7) {
+  text-align: center;
+}
+
 .matrix-material-cell {
   display: flex;
   align-items: center;
