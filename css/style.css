@@ -2604,16 +2604,23 @@ ul, ol {
   overflow: hidden;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
 }
 
 .quote-info-side {
-  padding: 48px;
+  padding: clamp(24px, 4vw, 48px);
   background: linear-gradient(135deg, #0f1d38 0%, #1e293b 100%);
   color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .quote-info-side::after {
@@ -2624,10 +2631,11 @@ ul, ol {
   width: 200px;
   height: 200px;
   background: radial-gradient(circle, rgba(225, 20, 113, 0.25) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .quote-info-title {
-  font-size: 2.15rem;
+  font-size: clamp(1.5rem, 3vw, 2.15rem);
   font-weight: 900;
   line-height: 1.25;
   margin-bottom: 16px;
@@ -2637,14 +2645,14 @@ ul, ol {
   font-size: 1rem;
   color: #e2e8f0;
   line-height: 1.6;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .quote-perks-list {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  margin-bottom: 32px;
+  gap: 12px;
+  margin-bottom: 24px;
 }
 
 .perk-item {
@@ -2673,18 +2681,23 @@ ul, ol {
 .quote-support-tag {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
-  padding: 14px 20px;
+  padding: 14px 18px;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   display: flex;
   align-items: center;
   gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 16px;
 }
 
 .quote-calc-side {
-  padding: 48px;
+  padding: clamp(24px, 4vw, 48px);
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 /* ==========================================================================
@@ -6442,14 +6455,16 @@ textarea:focus-visible {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   padding-bottom: 8px;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .quote-trust-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px 14px;
   width: 100%;
   box-sizing: border-box;
@@ -6463,10 +6478,6 @@ textarea:focus-visible {
   color: rgba(255, 255, 255, 0.9);
   font-weight: 600;
   white-space: nowrap;
-}
-
-.quote-trust-grid > div:nth-child(even) {
-  justify-content: flex-end;
 }
 
 .material-info-banner {
