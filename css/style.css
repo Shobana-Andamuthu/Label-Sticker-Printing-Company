@@ -4343,7 +4343,7 @@ textarea {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
-  min-width: 820px;
+  min-width: 1100px;
 }
 
 [dir="rtl"] .matrix-table {
@@ -4352,9 +4352,15 @@ textarea {
 
 .matrix-table th, 
 .matrix-table td {
-  padding: 18px 20px;
+  padding: 16px 18px;
   border-bottom: 1px solid var(--border-subtle);
   vertical-align: middle;
+  white-space: nowrap;
+}
+
+.matrix-table td:nth-child(6) {
+  white-space: normal;
+  min-width: 200px;
 }
 
 .matrix-table th {
@@ -4383,6 +4389,7 @@ textarea {
   display: flex;
   align-items: center;
   gap: 12px;
+  min-width: 200px;
 }
 
 .matrix-swatch-dot {
@@ -4403,7 +4410,7 @@ textarea {
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 800;
-  white-space: nowrap;
+  white-space: nowrap !important;
   letter-spacing: 0.02em;
   width: 140px;
   min-width: 140px;
@@ -4428,15 +4435,19 @@ textarea {
 }
 
 .matrix-table .btn {
-  white-space: nowrap;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
   font-weight: 700;
   border-radius: 9999px;
-  padding: 7px 16px;
+  padding: 7px 18px;
   font-size: 0.8125rem;
+  min-width: 136px !important;
+  width: auto !important;
+  box-sizing: border-box !important;
   transition: all var(--transition-fast);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .matrix-table .btn-outline {

@@ -554,13 +554,33 @@
     grid-template-columns: 1fr !important;
   }
 
+  .matrix-table-scroll {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    width: 100% !important;
+    display: block !important;
+  }
+
   .matrix-table {
+    min-width: 1050px !important;
     font-size: 0.8125rem;
   }
 
   .matrix-table th, 
   .matrix-table td {
     padding: 12px 14px !important;
+    white-space: nowrap !important;
+  }
+
+  .matrix-table td:nth-child(6) {
+    white-space: normal !important;
+    min-width: 180px !important;
+  }
+
+  .matrix-table .btn {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    min-width: 130px !important;
   }
 
   /* Footer & Back to top */
