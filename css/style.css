@@ -2357,7 +2357,12 @@ ul, ol {
   padding: 4px 10px;
   border-radius: 9999px;
   display: inline-block;
-  margin-top: auto;
+  margin-top: auto !important;
+  position: static !important;
+  pointer-events: auto !important;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ==========================================================================
@@ -6376,7 +6381,6 @@ input[type="radio"] {
 .product-badge,
 .industry-badge,
 .collection-badge,
-.finish-tag,
 .catalog-badge-floating,
 .catalog-category-tag {
   position: absolute !important;
