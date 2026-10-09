@@ -269,6 +269,103 @@
   .auth-card {
     padding: 30px 24px;
   }
+
+  /* --- STRICT IPAD MINI & TABLET CARD HORIZONTAL BASELINE ALIGNMENT --- */
+  .collection-card,
+  .product-card,
+  .industry-card,
+  .finish-card,
+  .finishes-card,
+  .story-card,
+  .shapes-2-card,
+  .shape-card,
+  .prep-guide-card,
+  .catalog-card {
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    box-sizing: border-box !important;
+  }
+
+  .collection-img-wrap,
+  .product-img-box,
+  .finish-img-box {
+    height: 210px !important;
+    width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .collection-img-wrap img,
+  .product-img-box img,
+  .finish-img-box img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .collection-body,
+  .product-body,
+  .industry-card-body,
+  .finish-body,
+  .story-body,
+  .catalog-body {
+    padding: 20px 18px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important;
+  }
+
+  .collection-title,
+  .product-title,
+  .finish-title,
+  .story-title {
+    font-size: 1.15rem !important;
+    min-height: 2.7em !important;
+    line-height: 1.35 !important;
+    margin-bottom: 8px !important;
+    display: flex !important;
+    align-items: flex-start !important;
+  }
+
+  .collection-desc,
+  .product-desc,
+  .finish-desc,
+  .industry-card-desc,
+  .story-desc {
+    font-size: 0.875rem !important;
+    min-height: 4.8em !important;
+    line-height: 1.55 !important;
+    margin-bottom: 14px !important;
+  }
+
+  .collection-specs-bar,
+  .product-specs-box {
+    min-height: 60px !important;
+    margin-top: auto !important;
+    margin-bottom: 16px !important;
+    padding: 10px 12px !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+
+  .collection-footer,
+  .product-footer,
+  .finish-footer {
+    margin-top: auto !important;
+    padding-top: 14px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+  }
+
+  .collection-price-val,
+  .product-price-val {
+    font-size: 1.25rem !important;
+  }
 }
 
 /* ==========================================================================
