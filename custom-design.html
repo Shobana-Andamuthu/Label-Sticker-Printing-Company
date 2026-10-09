@@ -297,73 +297,88 @@
           </p>
         </div>
 
-        <div class="catalog-grid" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="custom-options-grid">
           
-          <div class="custom-opt-card" style="padding: 24px;">
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+          <!-- Card 1: Resolution & Color -->
+          <div class="custom-opt-card">
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
               <div class="industry-icon-box">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="12 8 8 12 12 16 16 12 12 8"></polygon></svg>
               </div>
-              <h3 style="font-size:1.15rem; font-weight:800; margin:0;">Resolution & Color</h3>
+              <h3 style="font-size:1.15rem; font-weight:800; margin:0; color:var(--text-main);">Resolution & Color</h3>
             </div>
-            <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px; font-size:0.875rem; color:var(--text-secondary);">
-              <li style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-subtle); padding-bottom:6px;">
-                <span>Print Engine</span> <strong style="color:var(--text-main);">2400 × 1200 DPI</strong>
+            <ul class="spec-list">
+              <li class="spec-item">
+                <span class="spec-label">Print Engine</span>
+                <strong class="spec-value">2400 × 1200 DPI</strong>
               </li>
-              <li style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-subtle); padding-bottom:6px;">
-                <span>Color Space</span> <strong style="color:var(--text-main);">7-Color CMYK + OGV</strong>
+              <li class="spec-item">
+                <span class="spec-label">Color Space</span>
+                <strong class="spec-value">7-Color CMYK + OGV</strong>
               </li>
-              <li style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-subtle); padding-bottom:6px;">
-                <span>Underprinting</span> <strong style="color:var(--text-main);">Opaque White Ink Layer</strong>
+              <li class="spec-item">
+                <span class="spec-label">Underprinting</span>
+                <strong class="spec-value">Opaque White Ink</strong>
               </li>
-              <li style="display:flex; justify-content:space-between;">
-                <span>Color Standard</span> <strong style="color:var(--text-main);">G7 Master Calibrated</strong>
+              <li class="spec-item">
+                <span class="spec-label">Color Standard</span>
+                <strong class="spec-value">G7 Master Certified</strong>
               </li>
             </ul>
           </div>
 
+          <!-- Card 2: Substrate Materials -->
           <div class="custom-opt-card">
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
               <div class="industry-icon-box">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
               </div>
-              <h3 style="font-size:1.15rem; font-weight:800; margin:0;">Substrate Materials</h3>
+              <h3 style="font-size:1.15rem; font-weight:800; margin:0; color:var(--text-main);">Substrate Materials</h3>
             </div>
-            <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px; font-size:0.875rem; color:var(--text-secondary);">
-              <li style="display:flex; justify-content:space-between; align-items:center; gap:8px; flex-wrap:wrap; border-bottom:1px solid var(--border-subtle); padding-bottom:6px;">
-                <span>White BOPP Film</span> <strong style="color:var(--text-main); text-align:right;">Water & Oil Proof</strong>
+            <ul class="spec-list">
+              <li class="spec-item">
+                <span class="spec-label">White BOPP</span>
+                <strong class="spec-value">Water & Oil Proof</strong>
               </li>
-              <li style="display:flex; justify-content:space-between; align-items:center; gap:8px; flex-wrap:wrap; border-bottom:1px solid var(--border-subtle); padding-bottom:6px;">
-                <span>Cast Vinyl</span> <strong style="color:var(--text-main); text-align:right;">5-Yr Outdoor UV Rated</strong>
+              <li class="spec-item">
+                <span class="spec-label">Cast Vinyl</span>
+                <strong class="spec-value">5-Yr Outdoor UV</strong>
               </li>
-              <li style="display:flex; justify-content:space-between; align-items:center; gap:8px; flex-wrap:wrap; border-bottom:1px solid var(--border-subtle); padding-bottom:6px;">
-                <span>Holographic PET</span> <strong style="color:var(--text-main); text-align:right;">Rainbow Diffraction</strong>
+              <li class="spec-item">
+                <span class="spec-label">Holographic</span>
+                <strong class="spec-value">Rainbow Shimmer</strong>
               </li>
-              <li style="display:flex; justify-content:space-between; align-items:center; gap:8px; flex-wrap:wrap;">
-                <span>Estate #9 Cream</span> <strong style="color:var(--text-main); text-align:right;">Wine Textured Paper</strong>
+              <li class="spec-item">
+                <span class="spec-label">Estate #9</span>
+                <strong class="spec-value">Wine Felt Paper</strong>
               </li>
             </ul>
           </div>
 
+          <!-- Card 3: Finishes & Tooling -->
           <div class="custom-opt-card">
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
               <div class="industry-icon-box">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
               </div>
-              <h3 style="font-size:1.15rem; font-weight:800; margin:0;">Finishes & Tooling</h3>
+              <h3 style="font-size:1.15rem; font-weight:800; margin:0; color:var(--text-main);">Finishes & Tooling</h3>
             </div>
-            <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px; font-size:0.875rem; color:var(--text-secondary);">
-              <li style="display:flex; justify-content:space-between; align-items:center; gap:8px; flex-wrap:wrap; border-bottom:1px solid var(--border-subtle); padding-bottom:6px;">
-                <span>Coatings</span> <strong style="color:var(--text-main); text-align:right;">Matte / Gloss / Soft-Touch</strong>
+            <ul class="spec-list">
+              <li class="spec-item">
+                <span class="spec-label">Coatings</span>
+                <strong class="spec-value">Matte / Gloss / Velvet</strong>
               </li>
-              <li style="display:flex; justify-content:space-between; align-items:center; gap:8px; flex-wrap:wrap; border-bottom:1px solid var(--border-subtle); padding-bottom:6px;">
-                <span>Specialty Effects</span> <strong style="color:var(--text-main); text-align:right;">Foil Stamping & Raised Spot UV</strong>
+              <li class="spec-item">
+                <span class="spec-label">Specialty</span>
+                <strong class="spec-value">Foil & Raised Spot UV</strong>
               </li>
-              <li style="display:flex; justify-content:space-between; align-items:center; gap:8px; flex-wrap:wrap; border-bottom:1px solid var(--border-subtle); padding-bottom:6px;">
-                <span>Cutting Tech</span> <strong style="color:var(--text-main); text-align:right;">Laser Die (±0.1mm accuracy)</strong>
+              <li class="spec-item">
+                <span class="spec-label">Cutting Tech</span>
+                <strong class="spec-value">Laser Die (±0.1mm)</strong>
               </li>
-              <li style="display:flex; justify-content:space-between; align-items:center; gap:8px; flex-wrap:wrap;">
-                <span>Supply Format</span> <strong style="color:var(--text-main); text-align:right;">Singles, Rolls (1"/3"), Sheets</strong>
+              <li class="spec-item">
+                <span class="spec-label">Supply Format</span>
+                <strong class="spec-value">Singles, Rolls & Sheets</strong>
               </li>
             </ul>
           </div>
@@ -620,9 +635,9 @@
               <!-- Section 4: Special Instructions -->
               <div style="margin-bottom: 28px;">
                 <div class="calc-form-group">
-                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-                    <label class="calc-label" for="spec-notes" style="margin-bottom:0;">Special Prepress Instructions & Pantone PMS Codes</label>
-                    <span id="char-counter" style="font-size:0.75rem; color:var(--text-secondary);">0 / 500</span>
+                  <div style="display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:6px;">
+                    <label class="calc-label" for="spec-notes" style="margin-bottom:0; flex:1;">Special Prepress Instructions &amp; Pantone PMS Codes</label>
+                    <span id="char-counter" style="font-size:0.75rem; color:var(--text-secondary); white-space:nowrap; flex-shrink:0; font-variant-numeric:tabular-nums;">0 / 500</span>
                   </div>
                   <textarea id="spec-notes" name="notes" rows="4" class="calc-input" maxlength="500" style="resize:vertical;" placeholder="Specify exact cutline preferences, white ink masks, spot foil locations, Pantone (PMS) color references, or roll unwind orientation..."></textarea>
                 </div>

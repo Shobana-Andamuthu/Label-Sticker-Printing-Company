@@ -2260,18 +2260,36 @@ ul, ol {
 }
 
 .finish-icon-chip {
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: var(--color-primary-light);
-  color: var(--color-primary);
+  background: linear-gradient(135deg, #e11471 0%, #ff2d87 100%);
+  color: #ffffff !important;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   margin: -38px auto 12px auto;
   position: relative;
   z-index: 2;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 14px rgba(225, 20, 113, 0.45);
+  border: 2px solid var(--bg-surface);
+  transition: transform var(--transition-bounce), box-shadow var(--transition-normal);
+}
+
+.finish-icon-chip svg {
+  stroke: #ffffff !important;
+  stroke-width: 2.2 !important;
+}
+
+[data-theme="dark"] .finish-icon-chip {
+  background: linear-gradient(135deg, #e11471 0%, #ff2d87 100%);
+  color: #ffffff !important;
+  border-color: var(--bg-surface);
+  box-shadow: 0 0 16px rgba(225, 20, 113, 0.6);
+}
+
+[data-theme="dark"] .finish-icon-chip svg {
+  stroke: #ffffff !important;
 }
 
 .finish-name {
@@ -4079,11 +4097,7 @@ textarea {
   color: var(--text-secondary);
   line-height: 1.55;
   margin-bottom: 16px;
-  min-height: 4.7em;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  min-height: 4.8em;
 }
 
 .industry-bullets {
@@ -4093,17 +4107,18 @@ textarea {
   flex-direction: column;
   gap: 10px;
   margin-top: auto;
-  min-height: 52px;
+  min-height: 60px;
 }
 
 .industry-bullet-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
   font-size: 0.8125rem;
   color: var(--text-main);
   font-weight: 600;
-  line-height: 1.35;
+  line-height: 1.45;
+  text-align: left;
 }
 
 .industry-bullet-item::before {
@@ -4113,6 +4128,16 @@ textarea {
   border-radius: 50%;
   background: var(--color-primary);
   flex-shrink: 0;
+  margin-top: 6px;
+}
+
+.industry-bullet-item svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+[dir="rtl"] .industry-bullet-item {
+  text-align: right;
 }
 
 .industry-card-btn {
@@ -5653,6 +5678,51 @@ textarea {
   box-shadow: 0 4px 12px rgba(225, 20, 113, 0.3);
 }
 
+/* Specification List in Custom Cards */
+.spec-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.spec-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.875rem;
+}
+
+.spec-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.spec-label {
+  color: var(--text-secondary);
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.spec-value {
+  color: var(--text-main);
+  font-weight: 800;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+[dir="rtl"] .spec-value {
+  text-align: left;
+}
+
 /* ==========================================================================
    PHASE 4: CUSTOM DESIGN & ARTWORK UPLOAD SPECIFIC STYLES
    ========================================================================== */
@@ -6254,6 +6324,30 @@ textarea:focus-visible {
   outline-offset: 2px;
 }
 
+/* Character Counter Single-Line Alignment Guarantee */
+#char-counter,
+.char-counter {
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  font-variant-numeric: tabular-nums;
+  display: inline-block;
+}
 
+/* Quote Section Trust & Guarantees Card */
+.quote-trust-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--card-radius);
+  padding: 16px 20px;
+  margin: 18px 0 16px 0;
+  backdrop-filter: blur(8px);
+}
 
+.material-info-banner {
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
 
+.material-info-banner:hover {
+  border-color: rgba(225, 20, 113, 0.35);
+  box-shadow: var(--shadow-md);
+}
