@@ -4153,8 +4153,8 @@ textarea {
   font-size: 0.875rem;
   color: var(--text-secondary);
   line-height: 1.55;
-  margin-bottom: 16px;
-  min-height: 4.8em;
+  margin-bottom: 18px;
+  min-height: 4.65em;
 }
 
 .industry-bullets {
@@ -4169,13 +4169,13 @@ textarea {
 .industry-bullet-item {
   display: flex;
   align-items: flex-start;
-  gap: 9px;
+  gap: 8px;
   font-size: 0.8125rem;
   color: var(--text-main);
   font-weight: 600;
   line-height: 1.45;
   text-align: left;
-  min-height: 2.85em;
+  min-height: 2.75em;
   box-sizing: border-box;
 }
 
