@@ -5173,17 +5173,19 @@ textarea {
 }
 
 .inner-hero-badge,
-.section-tag {
+.section-tag,
+.hero-badge,
+.hero-2-studio-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 7px 18px;
+  padding: 6px 18px;
   background: var(--color-primary-light);
   border: 1px solid rgba(225, 20, 113, 0.25);
   border-radius: 9999px;
   color: var(--color-primary);
-  font-size: 0.8125rem;
+  font-size: clamp(0.6875rem, 2.5vw, 0.8125rem);
   font-weight: 800;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -5193,7 +5195,8 @@ textarea {
   max-width: 100%;
   box-sizing: border-box;
   text-align: center;
-  line-height: 1.35;
+  white-space: nowrap !important;
+  flex-shrink: 0;
 }
 
 .inner-hero-badge svg,
@@ -5201,13 +5204,16 @@ textarea {
 .hero-badge svg,
 .hero-2-studio-badge svg {
   flex-shrink: 0;
+  width: 14px;
+  height: 14px;
 }
 
 .inner-hero-badge span,
 .section-tag span,
 .hero-badge span,
 .hero-2-studio-badge span {
-  display: inline;
+  display: inline-block;
+  white-space: nowrap !important;
   text-align: center;
 }
 
