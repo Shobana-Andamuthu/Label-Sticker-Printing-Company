@@ -180,15 +180,10 @@
   .about-industry-grid,
   .prep-guide-grid,
   .shape-cards-grid,
-  .studio-standards-bar {
+  .studio-standards-bar,
+  .custom-options-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 20px !important;
-  }
-
-  /* 3-Card Grid on iPad Pro & Tablets for balanced layout */
-  .custom-options-grid {
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 16px !important;
   }
 
   /* Layout 1-Column Stacking for Complex Split Sections & Why Cards */
@@ -365,6 +360,36 @@
   .collection-price-val,
   .product-price-val {
     font-size: 1.25rem !important;
+  }
+
+  .custom-opt-card {
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    padding: 24px 20px !important;
+    box-sizing: border-box !important;
+  }
+
+  .custom-opt-card .industry-title {
+    min-height: 2.4em !important;
+    font-size: 1.125rem !important;
+    line-height: 1.35 !important;
+    margin-bottom: 8px !important;
+    display: flex !important;
+    align-items: flex-start !important;
+  }
+
+  .custom-opt-card p {
+    min-height: 4.8em !important;
+    font-size: 0.875rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 16px !important;
+    flex-grow: 1 !important;
+  }
+
+  .custom-opt-badge {
+    margin-top: auto !important;
   }
 }
 
