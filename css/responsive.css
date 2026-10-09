@@ -514,11 +514,33 @@
   .contact-form-side,
   .auth-card,
   .auth-form-side,
+  .showcase-block,
+  .shape-info-banner,
+  .material-info-banner,
   #upload-section .card {
-    padding: 20px 14px !important;
+    padding: 18px 14px !important;
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
+  }
+
+  .shape-cards-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+
+  .material-card {
+    padding: 10px 12px !important;
+    gap: 10px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .material-badge {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    font-size: 0.625rem !important;
+    padding: 3px 6px !important;
   }
 
   .upload-dropzone {
@@ -647,6 +669,24 @@
 
   .auth-social-row {
     grid-template-columns: 1fr;
+  }
+
+  .material-card {
+    padding: 8px 10px !important;
+    gap: 8px !important;
+  }
+
+  .material-swatch {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .material-name {
+    font-size: 0.8125rem !important;
+  }
+
+  .material-props {
+    font-size: 0.6875rem !important;
   }
 }
 
