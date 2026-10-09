@@ -6431,9 +6431,42 @@ textarea:focus-visible {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: var(--card-radius);
-  padding: 16px 20px;
+  padding: 16px 18px;
   margin: 18px 0 16px 0;
   backdrop-filter: blur(8px);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.quote-trust-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding-bottom: 8px;
+}
+
+.quote-trust-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.quote-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.quote-trust-grid > div:nth-child(even) {
+  justify-content: flex-end;
 }
 
 .material-info-banner {
