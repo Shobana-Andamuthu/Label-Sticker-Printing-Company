@@ -197,10 +197,20 @@
   .shapes-materials-grid,
   .why-choose-wrapper,
   .why-features-grid,
-  .quote-wrapper,
   .quote-2-grid {
     grid-template-columns: 1fr !important;
     gap: 24px !important;
+  }
+
+  .quote-wrapper {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+    border-radius: var(--card-radius-lg) !important;
+    overflow: hidden !important;
   }
 
   .hero-mockup-wrapper,
@@ -522,6 +532,13 @@
     height: auto !important;
   }
 
+  .quote-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+  }
+
   .quote-info-side,
   .quote-calc-side,
   .quote-2-box,
@@ -533,7 +550,22 @@
   .shape-info-banner,
   .material-info-banner,
   #upload-section .card {
-    padding: 18px 14px !important;
+    padding: 20px 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .quote-trust-card {
+    padding: 14px 16px !important;
+    margin: 16px 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .quote-support-tag {
+    padding: 14px 16px !important;
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
