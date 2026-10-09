@@ -763,9 +763,14 @@
   }
 
   .hero-badge,
-  .hero-2-studio-badge {
-    font-size: 0.72rem !important;
+  .hero-2-studio-badge,
+  .inner-hero-badge,
+  .section-tag {
+    font-size: 0.65rem !important;
     padding: 4px 8px !important;
+    gap: 4px !important;
+    white-space: nowrap !important;
+    max-width: calc(100vw - 28px) !important;
   }
 
   .hero-mockup-wrapper,
