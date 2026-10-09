@@ -4386,12 +4386,17 @@ textarea {
   align-items: center;
   justify-content: center;
   gap: 5px;
-  padding: 5px 12px;
+  padding: 6px 12px;
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 800;
   white-space: nowrap;
   letter-spacing: 0.02em;
+  width: 140px;
+  min-width: 140px;
+  max-width: 140px;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .pill-super {
