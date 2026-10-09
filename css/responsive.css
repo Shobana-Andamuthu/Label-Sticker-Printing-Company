@@ -1,0 +1,690 @@
+/* ==========================================================================
+   PrintLabel Pro — Responsive Stylesheet (css/responsive.css)
+   Handles all Breakpoints:
+   - Ultra-Wide Screens (>= 1440px)
+   - Standard Laptops & Desktops (1025px - 1439px)
+   - iPad Portrait & Tablets (768px - 1024px) -> CRITICAL: Exactly 2 cards/row
+   - Mobile Landscape & Large Phones (481px - 767px)
+   - Mobile Portrait & Small Phones (200px - 480px)
+   ========================================================================== */
+
+/* --- Base Visibility Controls --- */
+.mobile-toggle,
+.menu-toggle-btn {
+  display: none !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg-surface-secondary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.mobile-toggle:hover,
+.menu-toggle-btn:hover {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.mobile-drawer-actions {
+  display: none;
+}
+
+/* ==========================================================================
+   1. TABLET & IPAD BREAKPOINT (768px to 1199px)
+   CRITICAL REQUIREMENT: Exactly 2 cards per row in every product/category/industry/collection grid
+   ========================================================================== */
+@media screen and (max-width: 1199px) {
+  :root {
+    --header-height: 72px;
+  }
+
+  /* Header Navigation Drawer */
+  .mobile-toggle,
+  .menu-toggle-btn {
+    display: inline-flex !important;
+  }
+
+  /* Hide desktop buttons from top bar and keep only hamburger button */
+  .header-actions > *:not(.menu-toggle-btn):not(.mobile-toggle) {
+    display: none !important;
+  }
+
+  .header-actions {
+    gap: 0 !important;
+  }
+
+  .nav-menu-wrapper {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background-color: var(--bg-surface);
+    border-bottom: 2px solid var(--border-medium);
+    box-shadow: var(--shadow-lg);
+    padding: 24px;
+    max-height: calc(100vh - var(--header-height));
+    overflow-y: auto;
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 99;
+    animation: menuSlideDown 0.25s ease forwards;
+  }
+
+  .nav-menu-wrapper.open {
+    display: flex !important;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    width: 100%;
+  }
+
+  .nav-link {
+    padding: 12px 16px;
+    font-size: 1rem;
+    border-radius: var(--card-radius-sm);
+    justify-content: space-between;
+    background: var(--bg-surface-secondary);
+  }
+
+  .nav-link.active {
+    background: var(--color-primary-light) !important;
+    color: var(--color-primary) !important;
+    border-left: 3px solid var(--color-primary);
+    font-weight: 800 !important;
+  }
+
+  [dir="rtl"] .nav-link.active {
+    border-left: none;
+    border-right: 3px solid var(--color-primary);
+  }
+
+  .nav-item-dropdown .dropdown-menu {
+    position: static;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: none;
+    box-shadow: none;
+    border: 1px solid var(--border-subtle);
+    margin-top: 6px;
+    margin-bottom: 6px;
+    background-color: var(--bg-surface);
+    border-radius: var(--card-radius-sm);
+    transition: all var(--transition-fast);
+  }
+
+  .nav-item-dropdown.active .dropdown-menu {
+    display: flex !important;
+    flex-direction: column;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .mobile-drawer-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .mobile-cta-btn {
+    width: 100%;
+    height: 44px;
+    font-size: 0.9375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-drawer-aux {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .mobile-aux-btn {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 0.8125rem;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  /* --- STRICT IPAD PORTRAIT RULE: EXACTLY 2 CARDS PER ROW --- */
+  .category-grid,
+  .product-grid,
+  .catalog-grid,
+  .materials-grid,
+  .materials-deep-grid,
+  .finishes-showcase-grid,
+  .finishes-grid,
+  .process-grid,
+  .industry-grid,
+  .collection-grid,
+  .shapes-2-grid,
+  .quality-showcase-grid,
+  .story-grid,
+  .about-industry-grid,
+  .prep-guide-grid,
+  .shape-cards-grid,
+  .studio-standards-bar {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+
+  /* 3-Card Grid on iPad Pro & Tablets for balanced layout */
+  .custom-options-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  /* Layout 1-Column Stacking for Complex Split Sections & Why Cards */
+  .hero-grid,
+  .hero-2-grid,
+  .shapes-materials-grid,
+  .why-choose-wrapper,
+  .why-features-grid,
+  .quote-wrapper,
+  .quote-2-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .hero-mockup-wrapper,
+  .hero-2-studio-card {
+    height: clamp(320px, 45vw, 420px) !important;
+    max-height: none !important;
+    width: 100% !important;
+  }
+
+  .hero-main-img,
+  .hero-2-studio-img {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .footer-top {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 32px !important;
+  }
+
+  /* Tablet Form Responsiveness */
+  .calc-grid-2,
+  .calc-grid-3,
+  .form-grid-2,
+  .form-grid-3 {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .quote-info-side,
+  .quote-calc-side {
+    padding: 32px 24px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .auth-page-container {
+    grid-template-columns: 42% 58%;
+  }
+
+  .auth-visual-side {
+    padding: 36px 24px;
+  }
+
+  .auth-form-side {
+    padding: 32px 24px;
+  }
+
+  .auth-card {
+    padding: 30px 24px;
+  }
+}
+
+/* ==========================================================================
+   2. MOBILE BREAKPOINT (<= 767px)
+   ========================================================================== */
+@media screen and (max-width: 767px) {
+  :root {
+    --header-height: 68px;
+  }
+
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .section {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  /* Brand Logo Mobile Tuning */
+  .brand-logo {
+    gap: 8px;
+    max-width: calc(100% - 56px);
+  }
+
+  .brand-logo-img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .brand-main {
+    font-size: 1.1875rem;
+  }
+
+  .brand-tagline {
+    display: none !important;
+  }
+
+  .brand-cmyk-bar {
+    margin-top: 2px;
+  }
+
+  /* Header Actions on Mobile - Only Menu Toggle Visible in Top Bar */
+  .header-actions {
+    gap: 0 !important;
+  }
+
+  .header-actions > *:not(.menu-toggle-btn):not(.mobile-toggle) {
+    display: none !important;
+  }
+
+  .navbar-container {
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  /* Single Column Stacking for All Cards */
+  .category-grid,
+  .product-grid,
+  .catalog-grid,
+  .materials-grid,
+  .materials-deep-grid,
+  .finishes-showcase-grid,
+  .custom-options-grid,
+  .finishes-grid,
+  .process-grid,
+  .industry-grid,
+  .collection-grid,
+  .shapes-2-grid,
+  .quality-showcase-grid,
+  .story-grid,
+  .about-industry-grid,
+  .prep-guide-grid,
+  .shape-cards-grid,
+  .why-features-grid,
+  .studio-standards-bar,
+  .stats-grid,
+  .footer-top {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* Hero Section Mobile Adjustments */
+  .hero-section,
+  .hero-2-section {
+    min-height: auto !important;
+    padding-top: 36px !important;
+    padding-bottom: 44px !important;
+  }
+
+  .hero-title,
+  .hero-2-title {
+    font-size: clamp(1.75rem, 5.5vw, 2.1rem) !important;
+    line-height: 1.2 !important;
+    margin-bottom: 14px !important;
+  }
+
+  .hero-subtitle,
+  .hero-2-desc {
+    font-size: 0.9375rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 22px !important;
+  }
+
+  .hero-cta-group {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .hero-cta-group .btn {
+    width: 100% !important;
+  }
+
+  .hero-features-list {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    padding-top: 18px !important;
+  }
+
+  .hero-feat-item {
+    font-size: 0.875rem !important;
+  }
+
+  .hero-mockup-wrapper,
+  .hero-2-studio-card {
+    height: clamp(240px, 50vw, 320px) !important;
+    max-height: none !important;
+    width: 100% !important;
+  }
+
+  .hero-main-img,
+  .hero-2-studio-img {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .floating-badge,
+  .floating-pill {
+    display: none !important;
+  }
+
+  .studio-stats-floating {
+    position: static !important;
+    margin-top: 14px !important;
+    border-radius: var(--card-radius-sm) !important;
+    padding: 14px !important;
+  }
+
+  /* Forms, Selects & Calculators */
+  .calc-grid-2,
+  .calc-grid-3,
+  .form-grid-2,
+  .form-grid-3 {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .calc-form-group,
+  .form-group,
+  .auth-input-group,
+  .contact-form-group {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin-bottom: 14px !important;
+  }
+
+  input,
+  select,
+  textarea,
+  .calc-select,
+  .calc-input,
+  .form-control,
+  .form-select,
+  .form-input,
+  .auth-input,
+  .contact-input,
+  .modal-input {
+    font-size: 16px !important; /* Prevents auto-zoom on iOS */
+    padding: 11px 14px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  select,
+  .calc-select,
+  .form-select {
+    padding-right: 38px !important;
+  }
+
+  .custom-select-trigger {
+    font-size: 15px !important;
+    padding: 10px 14px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .custom-select-dropdown {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .custom-datepicker-popup {
+    width: min(320px, calc(100vw - 16px)) !important;
+    max-width: calc(100vw - 16px) !important;
+    padding: 12px 10px !important;
+  }
+
+  .dp-day-cell {
+    height: 32px !important;
+    font-size: 0.8125rem !important;
+  }
+
+  [dir="rtl"] select,
+  [dir="rtl"] .calc-select,
+  [dir="rtl"] .form-select {
+    padding-right: 14px !important;
+    padding-left: 38px !important;
+  }
+
+  [dir="rtl"] .custom-select-trigger {
+    text-align: right !important;
+  }
+
+  .btn,
+  .btn-lg,
+  .btn-primary,
+  .btn-outline,
+  #btn-submit-upload {
+    white-space: normal !important;
+    word-break: break-word;
+    text-align: center;
+    line-height: 1.35;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .btn-lg {
+    padding: 12px 18px !important;
+    font-size: clamp(0.875rem, 3.5vw, 1rem) !important;
+    min-height: 48px;
+    height: auto !important;
+  }
+
+  .quote-info-side,
+  .quote-calc-side,
+  .quote-2-box,
+  .quote-2-form-card,
+  .contact-form-side,
+  .auth-card,
+  .auth-form-side,
+  #upload-section .card {
+    padding: 20px 14px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .upload-dropzone {
+    padding: 24px 14px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .quote-2-perks {
+    grid-template-columns: 1fr !important;
+  }
+
+  .matrix-table {
+    font-size: 0.8125rem;
+  }
+
+  .matrix-table th, 
+  .matrix-table td {
+    padding: 12px 14px !important;
+  }
+
+  /* Footer & Back to top */
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 14px;
+  }
+
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+  }
+
+  [dir="rtl"] .back-to-top {
+    right: auto;
+    left: 20px;
+  }
+
+  /* Modal responsiveness */
+  .modal-overlay {
+    padding: 10px !important;
+  }
+
+  .modal-content {
+    padding: 22px 16px !important;
+    max-height: calc(100vh - 20px) !important;
+    max-height: calc(100dvh - 20px) !important;
+    overflow-y: auto !important;
+    margin: auto !important;
+  }
+
+  /* Auth split screen on mobile */
+  .auth-page-container {
+    grid-template-columns: 1fr !important;
+    min-height: auto;
+  }
+
+  .auth-visual-side {
+    padding: 28px 18px !important;
+    min-height: 200px !important;
+  }
+
+  .auth-visual-desc,
+  .auth-perks-row {
+    display: none !important;
+  }
+
+  .auth-visual-title {
+    font-size: 1.5rem !important;
+    margin-bottom: 0 !important;
+  }
+
+  .auth-form-side {
+    padding: 24px 16px !important;
+    min-height: auto;
+  }
+
+  .auth-card {
+    padding: 24px 16px !important;
+    border-radius: 18px !important;
+  }
+
+  .auth-card-title {
+    font-size: 1.35rem !important;
+  }
+}
+
+/* ==========================================================================
+   3. ULTRA-NARROW SCREENS (<= 360px down to 200px)
+   ========================================================================== */
+@media screen and (max-width: 360px) {
+  .brand-tagline {
+    display: none;
+  }
+
+  .hero-title,
+  .hero-2-title {
+    font-size: clamp(1.3rem, 6.5vw, 1.6rem) !important;
+  }
+
+  .hero-badge,
+  .hero-2-studio-badge {
+    font-size: 0.72rem !important;
+    padding: 4px 8px !important;
+  }
+
+  .hero-mockup-wrapper,
+  .hero-2-studio-card {
+    height: clamp(170px, 45vw, 220px) !important;
+  }
+
+  .section-title {
+    font-size: 1.35rem !important;
+  }
+
+  .mobile-drawer-aux {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-action-btn {
+    padding: 0 8px;
+  }
+
+  .auth-social-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   4. UNIFIED INNER PAGE HERO RESPONSIVENESS
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  .inner-page-hero,
+  .products-hero-section {
+    min-height: 360px;
+    padding: 44px 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .inner-page-hero,
+  .products-hero-section {
+    min-height: 320px;
+    padding: 36px 12px;
+  }
+  .inner-hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .inner-hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* --- Menu Animation --- */
+@keyframes menuSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

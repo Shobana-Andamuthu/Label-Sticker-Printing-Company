@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" width="100%" height="100%">
+  <defs>
+    <linearGradient id="iconCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00C0FA"/>
+      <stop offset="100%" stop-color="#0077CC"/>
+    </linearGradient>
+    <linearGradient id="iconMagenta" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF2D8D"/>
+      <stop offset="50%" stop-color="#E11471"/>
+      <stop offset="100%" stop-color="#A5004D"/>
+    </linearGradient>
+    <linearGradient id="iconYellow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE600"/>
+      <stop offset="100%" stop-color="#E59B00"/>
+    </linearGradient>
+    <linearGradient id="iconCore" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(5, 5)">
+    <!-- Top Magenta Ribbon Loop -->
+    <path d="M 52 14 C 74 14, 94 28, 94 52 C 94 74, 76 86, 52 86 L 38 86 C 38 86, 38 72, 38 60 C 38 48, 48 38, 62 38 C 72 38, 78 44, 78 52 C 78 62, 70 70, 58 70 L 52 70" 
+          fill="none" stroke="url(#iconMagenta)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Yellow Inside Fold -->
+    <path d="M 38 42 C 44 32, 54 28, 66 28 C 80 28, 90 38, 88 52 C 86 64, 76 72, 64 72 L 48 72" 
+          fill="url(#iconYellow)" opacity="0.95"/>
+
+    <!-- Cyan Outer Spine -->
+    <path d="M 38 74 L 38 34 C 38 18, 52 10, 68 10 C 50 10, 32 20, 24 38 C 16 56, 16 76, 24 92 C 28 84, 34 78, 38 74 Z" 
+          fill="url(#iconCyan)"/>
+
+    <!-- CMYK Face Bands -->
+    <path d="M 28 88 C 34 78, 44 68, 52 64 L 56 68 C 48 72, 38 82, 32 94 Z" fill="#00A3FF"/>
+    <path d="M 32 94 C 40 82, 50 72, 60 68 L 64 72 C 54 76, 44 86, 36 98 Z" fill="#E11471"/>
+    <path d="M 36 98 C 44 86, 54 76, 68 72 L 72 76 C 58 80, 48 90, 40 102 Z" fill="#FACC15"/>
+    <path d="M 40 102 C 48 90, 58 80, 76 76 L 80 80 C 62 84, 52 94, 44 105 Z" fill="#0F172A"/>
+
+    <!-- Roll Core -->
+    <ellipse cx="26" cy="88" rx="18" ry="18" fill="url(#iconCore)"/>
+    <ellipse cx="26" cy="88" rx="14" ry="14" fill="#1E293B" stroke="#0F172A" stroke-width="2"/>
+    <ellipse cx="26" cy="88" rx="7" ry="7" fill="#FFFFFF"/>
+  </g>
+</svg>

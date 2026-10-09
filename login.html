@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sign in or register for your PrintLabel Pro client portal. Access digital 3D proofs, track commercial press runs, and manage reorders.">
+  <meta name="keywords" content="print portal login, label client sign in, sticker account registration, prepress proofing dashboard">
+  <title>Customer Login & Registration | PrintLabel Pro</title>
+  
+  <!-- Main CSS & Responsive CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M8 4h10a8 8 0 0 1 8 8c0 4.4-3.6 8-8 8H14v8H8V4z' fill='%23e11471'/><path d='M8 4h8a6 6 0 0 1 6 6c0 3.3-2.7 6-6 6h-8V4z' fill='%23fbb034'/><path d='M8 16h6v12H8z' fill='%2306b6d4'/></svg>">
+</head>
+<body class="auth-page-body">
+
+  <!-- ==========================================================================
+       PAGE LOADER / PRELOADER
+       ========================================================================== -->
+  <div id="page-loader" class="page-loader" aria-hidden="true">
+    <div class="loader-content">
+      <div class="loader-brand-visual">
+        <div class="loader-logo-ring">
+          <img src="images/logo-icon.svg" alt="PrintLabel Loading" class="loader-logo-icon" width="58" height="58">
+          <div class="cmyk-orbit">
+            <span class="orbit-dot dot-c"></span>
+            <span class="orbit-dot dot-m"></span>
+            <span class="orbit-dot dot-y"></span>
+            <span class="orbit-dot dot-k"></span>
+          </div>
+        </div>
+        <div class="loader-brand-title">
+          Print<span class="loader-magenta">Label</span>
+        </div>
+        <div class="loader-tagline">LABEL &amp; STICKER PRINTING COMPANY</div>
+      </div>
+      
+      <div class="loader-progress-track">
+        <div class="loader-progress-bar"></div>
+      </div>
+      
+      <div class="loader-status">
+        <span class="loader-pulse-dot"></span>
+        <span class="loader-status-text">Loading Authentication Portal...</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="auth-page-container">
+    
+    <!-- ==========================================================================
+         LEFT PANEL: PHOTOGRAPHIC HERO WITH BRANDING & CALLOUT
+         ========================================================================== -->
+    <div class="auth-visual-side">
+      <!-- Background Image with Overlay -->
+      <div class="auth-bg-overlay"></div>
+      
+      <!-- Top Left Brand Logo -->
+      <div class="auth-visual-header">
+        <a href="index.html" class="brand-logo" aria-label="PrintLabel Pro Homepage">
+          <img src="images/logo-icon.svg" alt="PrintLabel Logo Mark" class="brand-logo-img" width="44" height="44">
+          <div class="brand-name">
+            <span class="brand-main" style="color:#ffffff;">Print<span class="brand-accent">Label</span></span>
+            <span class="brand-tagline" style="color:rgba(255,255,255,0.75);">LABEL &amp; STICKER PRINTING COMPANY</span>
+            <span class="brand-cmyk-bar" aria-hidden="true">
+              <span class="cmyk-seg c-seg"></span>
+              <span class="cmyk-seg m-seg"></span>
+              <span class="cmyk-seg y-seg"></span>
+              <span class="cmyk-seg k-seg" style="background-color:#ffffff;"></span>
+            </span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Bottom Left Content Block -->
+      <div class="auth-visual-footer">
+        <div class="auth-tag-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+          <span>Client & Prepress Portal</span>
+        </div>
+
+        <h1 class="auth-visual-title">
+          Welcome to the <br><span class="gradient-text" style="background:linear-gradient(135deg, #ffffff 0%, var(--color-accent) 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Print Studio Hub</span>
+        </h1>
+
+        <p class="auth-visual-desc">
+          Log in to manage your artwork vector files, review interactive 3D digital proofs, track high-speed press runs, and access fast reorder discounts.
+        </p>
+
+        <div class="auth-perks-row">
+          <div class="auth-perk-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Live Press Tracking</span>
+          </div>
+          <div class="auth-perk-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>1-Click Reorders</span>
+          </div>
+          <div class="auth-perk-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Prepress Vector Archive</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         RIGHT PANEL: CLEAN AUTHENTICATION CARD & CONTROLS
+         ========================================================================== -->
+    <div class="auth-form-side">
+      
+      <!-- Top Right Utility Bar -->
+      <div class="auth-top-actions" style="justify-content: flex-end;">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <!-- Theme Toggle -->
+          <button class="nav-action-btn theme-toggle-btn" aria-label="Toggle Light and Dark Theme" style="height:38px; width:38px; padding:0; justify-content:center;">
+            <span class="theme-icon btn-icon-symbol">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </span>
+          </button>
+
+          <!-- RTL Toggle -->
+          <button class="nav-action-btn rtl-toggle-btn" aria-label="Toggle Right to Left" style="height:38px; padding:0 12px; font-size:0.8125rem;">
+            <span class="rtl-text">RTL</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Centered Card -->
+      <div class="auth-card-wrapper">
+        <div class="auth-card">
+          
+          <!-- Card Header & Description -->
+          <div class="auth-card-header">
+            <h2 id="auth-title" class="auth-card-title">Welcome Back</h2>
+            <p id="auth-subtitle" class="auth-card-desc">
+              Sign in to access your print runs, proofs, and orders.
+            </p>
+          </div>
+
+          <!-- Segmented Tab Switcher (Sign In vs Create Account) -->
+          <div class="auth-tabs" role="tablist" aria-label="Authentication Options">
+            <button class="auth-tab-btn active" id="tab-login" role="tab" aria-selected="true" aria-controls="form-login-pane">
+              Sign In
+            </button>
+            <button class="auth-tab-btn" id="tab-signup" role="tab" aria-selected="false" aria-controls="form-signup-pane">
+              Create Account
+            </button>
+          </div>
+
+          <!-- Simulated Feedback Toast (Success notification) -->
+          <div id="auth-alert-box" style="display:none; padding:12px 16px; border-radius:10px; margin-bottom:18px; font-size:0.875rem; text-align:left;"></div>
+
+          <!-- ------------------------------------------------------------------
+               TAB 1: SIGN IN FORM
+               ------------------------------------------------------------------ -->
+          <div id="form-login-pane" role="tabpanel" aria-labelledby="tab-login">
+            <form id="auth-login-form" novalidate>
+              
+              <!-- Email Input -->
+              <div class="calc-form-group" style="margin-bottom:16px;">
+                <label class="calc-label" for="login-email">Email Address</label>
+                <div class="auth-input-wrapper">
+                  <input type="email" id="login-email" class="calc-input auth-input" placeholder="you@brand.com" required value="client@brandstudio.com">
+                </div>
+                <span class="form-error-msg" id="err-login-email" style="display:none; color:#ef4444; font-size:0.75rem; margin-top:4px;">Please enter a valid email address.</span>
+              </div>
+
+              <!-- Password Input with Show/Hide Toggle -->
+              <div class="calc-form-group" style="margin-bottom:16px;">
+                <label class="calc-label" for="login-password">Password</label>
+                <div class="auth-input-wrapper" style="position:relative;">
+                  <input type="password" id="login-password" class="calc-input auth-input" placeholder="••••••••••••" required value="SecurePrint2026!">
+                  <button type="button" class="auth-pwd-toggle" id="btn-toggle-login-pwd" aria-label="Toggle password visibility">
+                    <svg class="eye-open" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                    <svg class="eye-closed" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg>
+                  </button>
+                </div>
+                <span class="form-error-msg" id="err-login-pwd" style="display:none; color:#ef4444; font-size:0.75rem; margin-top:4px;">Please enter your account password.</span>
+              </div>
+
+              <!-- Remember Me & Forgot Password Row -->
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; font-size:0.875rem;">
+                <label style="display:flex; align-items:center; gap:8px; cursor:pointer; user-select:none; color:var(--text-secondary);">
+                  <input type="checkbox" id="login-remember" checked style="accent-color:var(--color-primary); width:16px; height:16px; cursor:pointer;">
+                  <span>Remember me</span>
+                </label>
+                <a href="#forgot-password" class="auth-forgot-link" id="link-forgot-pwd">Forgot password?</a>
+              </div>
+
+              <!-- Full-Width Primary Sign In CTA -->
+              <button type="submit" class="btn btn-primary auth-submit-btn" id="btn-submit-login">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
+                <span>Sign In to Dashboard →</span>
+              </button>
+
+              <!-- Social Divider -->
+              <div class="auth-divider">
+                <span>OR CONTINUE WITH</span>
+              </div>
+
+              <!-- Social Buttons Row -->
+              <div class="auth-social-row">
+                <button type="button" class="auth-social-btn" data-provider="Google">
+                  <svg width="18" height="18" viewBox="0 0 24 24">
+                    <path fill="#EA4335" d="M12 5c1.6 0 3 .6 4.1 1.7l3.1-3.1C17.3 1.8 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.4 9 5 12 5z"/>
+                    <path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.8z"/>
+                    <path fill="#FBBC05" d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.3s.2-1.6.4-2.3L1.9 7.3C.7 9.7 0 12 0 14.5s.7 4.8 1.9 7.2l3.7-2.9z"/>
+                    <path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2.4-6.4-5.2L1.9 17C3.7 20.7 7.5 24 12 24z"/>
+                  </svg>
+                  <span>Google</span>
+                </button>
+                <button type="button" class="auth-social-btn" data-provider="Apple">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.87c.66-.82 1.11-1.96.99-3.1-.96.04-2.13.64-2.82 1.45-.61.71-1.15 1.87-1 2.99 1.07.08 2.16-.54 2.83-1.34z"/>
+                  </svg>
+                  <span>Apple</span>
+                </button>
+                <button type="button" class="auth-social-btn" data-provider="Facebook">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="#1877F2">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                  <span>Facebook</span>
+                </button>
+              </div>
+
+              <!-- Switch to Sign Up link -->
+              <div style="text-align:center; margin-top:22px; font-size:0.875rem; color:var(--text-secondary);">
+                Don't have an account yet? 
+                <a href="#signup" class="auth-switch-link" id="link-to-signup" style="font-weight:700; color:var(--color-primary);">Create an Account</a>
+              </div>
+
+            </form>
+          </div>
+
+          <!-- ------------------------------------------------------------------
+               TAB 2: CREATE ACCOUNT FORM (SIGN UP)
+               ------------------------------------------------------------------ -->
+          <div id="form-signup-pane" role="tabpanel" aria-labelledby="tab-signup" style="display:none;">
+            <form id="auth-signup-form" novalidate>
+              
+              <!-- Full Name -->
+              <div class="calc-form-group" style="margin-bottom:14px;">
+                <label class="calc-label" for="signup-name">Full Name <span style="color:var(--color-primary);">*</span></label>
+                <input type="text" id="signup-name" class="calc-input auth-input" placeholder="e.g. Jordan Sterling" required>
+                <span class="form-error-msg" id="err-signup-name" style="display:none; color:#ef4444; font-size:0.75rem; margin-top:4px;">Please enter your full name.</span>
+              </div>
+
+              <!-- Company / Brand Name (Optional) -->
+              <div class="calc-form-group" style="margin-bottom:14px;">
+                <label class="calc-label" for="signup-company">Company / Brand Name <span style="font-size:0.75rem; color:var(--text-secondary); font-weight:normal;">(Optional)</span></label>
+                <input type="text" id="signup-company" class="calc-input auth-input" placeholder="e.g. Sterling Botanicals LLC">
+              </div>
+
+              <!-- Email Address -->
+              <div class="calc-form-group" style="margin-bottom:14px;">
+                <label class="calc-label" for="signup-email">Email Address <span style="color:var(--color-primary);">*</span></label>
+                <input type="email" id="signup-email" class="calc-input auth-input" placeholder="jordan@company.com" required>
+                <span class="form-error-msg" id="err-signup-email" style="display:none; color:#ef4444; font-size:0.75rem; margin-top:4px;">Please enter a valid email address.</span>
+              </div>
+
+              <!-- Password & Confirm Password Row -->
+              <div class="calc-grid-2" style="margin-bottom:14px; gap:12px;">
+                <div class="calc-form-group" style="margin-bottom:0;">
+                  <label class="calc-label" for="signup-pwd">Password <span style="color:var(--color-primary);">*</span></label>
+                  <div class="auth-input-wrapper" style="position:relative;">
+                    <input type="password" id="signup-pwd" class="calc-input auth-input" placeholder="••••••••••••" required>
+                    <button type="button" class="auth-pwd-toggle" id="btn-toggle-signup-pwd" aria-label="Toggle password visibility">
+                      <svg class="eye-open" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                      <svg class="eye-closed" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg>
+                    </button>
+                  </div>
+                  <span class="form-error-msg" id="err-signup-pwd" style="display:none; color:#ef4444; font-size:0.75rem; margin-top:4px;">Min 6 characters.</span>
+                </div>
+
+                <div class="calc-form-group" style="margin-bottom:0;">
+                  <label class="calc-label" for="signup-pwd-confirm">Confirm Password <span style="color:var(--color-primary);">*</span></label>
+                  <div class="auth-input-wrapper">
+                    <input type="password" id="signup-pwd-confirm" class="calc-input auth-input" placeholder="••••••••••••" required>
+                  </div>
+                  <span class="form-error-msg" id="err-signup-pwd-confirm" style="display:none; color:#ef4444; font-size:0.75rem; margin-top:4px;">Passwords must match.</span>
+                </div>
+              </div>
+
+              <!-- Terms acceptance -->
+              <div style="margin-bottom:18px; font-size:0.8125rem;">
+                <label style="display:flex; align-items:flex-start; gap:8px; cursor:pointer; user-select:none; color:var(--text-secondary);">
+                  <input type="checkbox" id="signup-terms" required style="accent-color:var(--color-primary); width:16px; height:16px; cursor:pointer; margin-top:2px;">
+                  <span>I agree to the <a href="#" style="color:var(--color-primary); font-weight:700;">Terms of Service</a> and <a href="#" style="color:var(--color-primary); font-weight:700;">Privacy Policy</a>.</span>
+                </label>
+                <span class="form-error-msg" id="err-signup-terms" style="display:none; color:#ef4444; font-size:0.75rem; margin-top:4px;">You must agree to continue.</span>
+              </div>
+
+              <!-- Full-Width Create Account CTA -->
+              <button type="submit" class="btn btn-primary auth-submit-btn" id="btn-submit-signup">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>
+                <span>Create Print Account →</span>
+              </button>
+
+              <!-- Social Divider -->
+              <div class="auth-divider">
+                <span>OR REGISTER WITH</span>
+              </div>
+
+              <!-- Social Buttons Row -->
+              <div class="auth-social-row">
+                <button type="button" class="auth-social-btn" data-provider="Google">
+                  <svg width="18" height="18" viewBox="0 0 24 24">
+                    <path fill="#EA4335" d="M12 5c1.6 0 3 .6 4.1 1.7l3.1-3.1C17.3 1.8 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.4 9 5 12 5z"/>
+                    <path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.8z"/>
+                    <path fill="#FBBC05" d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.3s.2-1.6.4-2.3L1.9 7.3C.7 9.7 0 12 0 14.5s.7 4.8 1.9 7.2l3.7-2.9z"/>
+                    <path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2.4-6.4-5.2L1.9 17C3.7 20.7 7.5 24 12 24z"/>
+                  </svg>
+                  <span>Google</span>
+                </button>
+                <button type="button" class="auth-social-btn" data-provider="Apple">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.87c.66-.82 1.11-1.96.99-3.1-.96.04-2.13.64-2.82 1.45-.61.71-1.15 1.87-1 2.99 1.07.08 2.16-.54 2.83-1.34z"/>
+                  </svg>
+                  <span>Apple</span>
+                </button>
+                <button type="button" class="auth-social-btn" data-provider="Facebook">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="#1877F2">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                  <span>Facebook</span>
+                </button>
+              </div>
+
+              <!-- Switch to Sign In link -->
+              <div style="text-align:center; margin-top:22px; font-size:0.875rem; color:var(--text-secondary);">
+                Already have an account? 
+                <a href="#login" class="auth-switch-link" id="link-to-signin" style="font-weight:700; color:var(--color-primary);">Sign In</a>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Back to Top Floating Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Scroll Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
