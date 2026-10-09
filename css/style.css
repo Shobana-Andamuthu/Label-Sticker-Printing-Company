@@ -2227,17 +2227,24 @@ ul, ol {
 .material-badge {
   font-size: clamp(0.625rem, 2vw, 0.6875rem);
   font-weight: 800;
-  padding: 3px 8px;
-  border-radius: 4px;
-  background-color: var(--bg-surface);
+  padding: 4px 10px;
+  border-radius: 6px;
+  background-color: var(--bg-surface-secondary);
   color: var(--color-primary);
   border: 1px solid var(--border-subtle);
   white-space: nowrap !important;
   flex-shrink: 0 !important;
-  align-self: center;
+  margin-left: auto !important;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  position: static !important;
+  pointer-events: auto !important;
+}
+
+[dir="rtl"] .material-badge {
+  margin-left: 0 !important;
+  margin-right: auto !important;
 }
 
 /* ==========================================================================
@@ -6363,7 +6370,7 @@ input[type="radio"] {
   overflow: hidden !important;
 }
 
-/* Ensure all floating badges and tags stay permanently visible above scaled images on card hover */
+/* Ensure only image floating badges stay permanently visible above scaled images on card hover */
 .category-tag,
 .product-badge-group,
 .product-badge,
@@ -6371,9 +6378,7 @@ input[type="radio"] {
 .collection-badge,
 .finish-tag,
 .catalog-badge-floating,
-.catalog-category-tag,
-.material-badge,
-.story-metric-badge {
+.catalog-category-tag {
   position: absolute !important;
   z-index: 10 !important;
   pointer-events: none !important;
