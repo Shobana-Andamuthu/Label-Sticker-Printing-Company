@@ -195,6 +195,20 @@ function initNavigation() {
       closeAllDropdowns();
     }
   });
+
+  // Sticky Header Scroll Elevation Effect
+  const header = document.querySelector('.main-header');
+  if (header) {
+    const handleScroll = () => {
+      if (window.scrollY > 15) {
+        header.classList.add('header-scrolled');
+      } else {
+        header.classList.remove('header-scrolled');
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+  }
 }
 
 /* ==========================================================================
