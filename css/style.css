@@ -2080,6 +2080,11 @@ ul, ol {
   border-radius: var(--card-radius-lg);
   padding: 32px;
   box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .showcase-block-title {
