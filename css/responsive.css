@@ -203,6 +203,8 @@
   }
 
   .quote-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
     grid-template-columns: 1fr !important;
     gap: 0 !important;
     width: 100% !important;
@@ -239,13 +241,17 @@
   .form-grid-3 {
     grid-template-columns: 1fr !important;
     gap: 14px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .quote-info-side,
   .quote-calc-side {
-    padding: 32px 24px !important;
+    padding: clamp(24px, 4vw, 36px) clamp(16px, 3.5vw, 28px) !important;
     width: 100% !important;
+    max-width: 100% !important;
     box-sizing: border-box !important;
+    flex: 1 1 100% !important;
   }
 
   .auth-page-container {
@@ -533,6 +539,8 @@
   }
 
   .quote-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
@@ -550,10 +558,20 @@
   .shape-info-banner,
   .material-info-banner,
   #upload-section .card {
-    padding: 20px 16px !important;
+    padding: clamp(18px, 4vw, 24px) clamp(14px, 3.5vw, 18px) !important;
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
+  }
+
+  #quote-calc-form,
+  .calc-form-group,
+  .calc-summary-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
   .quote-trust-card {
