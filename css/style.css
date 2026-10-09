@@ -3260,7 +3260,7 @@ textarea {
 
 .calc-summary-card {
   margin-top: auto;
-  padding: 20px;
+  padding: 18px 20px;
   background-color: var(--bg-surface-secondary);
   border-radius: var(--card-radius-sm);
   border: 1px solid var(--border-subtle);
@@ -3273,15 +3273,28 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
   margin-bottom: 8px;
-  font-size: 0.875rem;
+  font-size: clamp(0.8125rem, 2.6vw, 0.875rem);
   color: var(--text-secondary);
 }
 
+.summary-row > span:first-child {
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+.summary-row > strong,
+.summary-row > span:last-child {
+  text-align: right;
+  white-space: nowrap !important;
+}
+
 .summary-total {
-  font-size: 1.45rem;
+  font-size: clamp(1.25rem, 4vw, 1.45rem);
   font-weight: 900;
   color: var(--color-primary);
+  white-space: nowrap !important;
 }
 
 /* ==========================================================================
